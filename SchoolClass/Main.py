@@ -39,7 +39,7 @@ while True:
         break
     elif choice == "1":
         addstudent()
-         print("New student was added!")
+        print("New student was added!")
     elif choice == "2":
         addteacher()
         print("New teacher was added!")
