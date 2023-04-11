@@ -10,6 +10,7 @@ def addstudent():
     studentid= input("Student ID:")
     student = Student(name,surname,studentid)
     students.append(student)
+   
 
 def addteacher():
     name = input("Teacher Name:")
@@ -17,23 +18,28 @@ def addteacher():
     profession = input("Teacher Profession:")
     teacher = Teacher(name,surname,profession)
     teachers.append(teacher)
+    
 
 def printstudents():
     for student in students:
-        print(student)
+        print("Student List:\n",student)
 
 def printteachers():
     for teacher in teachers:
-        print(teacher)
+        print("Teacher List:\n",teacher)
+
 
 while True:
+    
     print("1- Add new student\n2- Add new teacher\n3- Show student list\n4- Show teacher list\nQ- Quit")
+    
     choice = input("Choose(1/2/3/4/q):")
-    if choice == "q":
+    
+    if  choice == "q":
         break
     elif choice == "1":
         addstudent()
-        print("New student was added!")
+         print("New student was added!")
     elif choice == "2":
         addteacher()
         print("New teacher was added!")
@@ -44,4 +50,3 @@ while True:
     else:
         print("PLease enter a valid key")
         continue
-       
